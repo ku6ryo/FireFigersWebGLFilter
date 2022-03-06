@@ -23,7 +23,7 @@ void main() {
   float theta = d * 2. * PI;
   vec2 direction = vec2(cos(theta), sin(theta));
   vec2 displacementVector = direction * d * 0.05;
-  vec4 effect = texture2D(u_imageMask, v_texCoord + displacementVector);
+  vec4 effect = texture2D(u_imageMask, v_texCoord + displacementVector * 1.5);
   float e = effect.a;
 
   float alpha = e;
